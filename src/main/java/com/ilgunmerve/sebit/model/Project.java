@@ -7,6 +7,11 @@ public class Project {
 
 	public Project() {}
 	
+
+//	@MappedCollection(idColumn = "ID", keyColumn = "CONTACT_NO")
+//	private List<Project> projects;
+
+	
 	public Project(int projectId, String projectName) {
 		this.projectId = projectId;
 		this.projectName = projectName;

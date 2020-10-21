@@ -7,9 +7,11 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import com.ilgunmerve.sebit.model.Project;
 
+@Repository
 public class ProjectDAOImpl implements ProjectDAO {
     
 	@Autowired
@@ -20,8 +22,8 @@ public class ProjectDAOImpl implements ProjectDAO {
 	}
 
 	@Override
-	public void save(Project project) {
-		jdbcTemplate.update("insert into project (projectName) values (?)", project.getProjectName());
+	public int save(Project project) {
+		return jdbcTemplate.update("insert into project (projectName) values (?)", project.getProjectName());
 	}
 
 	@Override

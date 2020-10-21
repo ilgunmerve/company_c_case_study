@@ -14,4 +14,12 @@ create table project
    primary key(projectId)
 );
 
+create table project_user(
+	userId integer not null,
+    projectId integer not null,
+    primary key(userId, projectId),
+    FOREIGN KEY(userId) REFERENCES user(userId),
+    FOREIGN KEY(projectId) REFERENCES project(projectId)
+);
+
 
