@@ -7,14 +7,10 @@ import com.ilgunmerve.sebit.model.User;
 
 public interface UserDAO {
 
-	public int save(User user);
-	
-	public int update(User user);
-	
-	public int delete(int userId);
-	
-	public Optional<User> get(int userId);
-
-	public List<User> listUser();
+	int save(User user);
+	int update(User user);	
+	int delete(int userId);	
+	Optional<User> get(int userId);
+	List<User> listUser();
 
 }

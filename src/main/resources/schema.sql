@@ -14,9 +14,20 @@ create table project
    primary key(projectId)
 );
 
-create table project_user(
-	userId integer not null,
+create table commit
+(
     projectId integer not null,
+    userId integer not null,
+    day date not null,
+    commitCount integer not null,
+    primary key(projectId, userId, day),
+    FOREIGN KEY(userId) REFERENCES user(userId),
+    FOREIGN KEY(projectId) REFERENCES project(projectId)
+);
+
+create table project_user(
+    projectId integer not null,
+    userId integer not null,
     primary key(userId, projectId),
     FOREIGN KEY(userId) REFERENCES user(userId),
     FOREIGN KEY(projectId) REFERENCES project(projectId)

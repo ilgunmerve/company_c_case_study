@@ -26,4 +26,11 @@ public class ProjectUser {
 		this.userId = userId;
 	}
 
+	@Override
+	public String toString() {
+		return "ProjectUser [userId=" + userId + ", projectId=" + projectId + "]";
+	}
+	
+	
+
 }

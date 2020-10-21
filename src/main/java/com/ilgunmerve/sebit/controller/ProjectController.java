@@ -29,7 +29,6 @@ public class ProjectController {
         return projectDAO.save(newProject);
     }
     
- // Find
     @GetMapping("/projects/{id}")
     Optional<Project> findOne(@PathVariable int id) {
         return projectDAO.get(id);

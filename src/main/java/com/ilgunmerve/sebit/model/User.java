@@ -47,5 +47,9 @@ public class User {
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", name=" + name + ", surname=" + surname + ", salary=" + salary + "]";
+	}
 }
