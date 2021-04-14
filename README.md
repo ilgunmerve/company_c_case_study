@@ -1,4 +1,4 @@
-# sebit_case_study
+# company_c_case_study
 
 Spring Boot was used to start Rest API together with H2 database and jdbc template.
 I have controller methods for rest endpoints
